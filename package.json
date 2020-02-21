@@ -1,0 +1,35 @@
+{
+  "name": "node-sql-realworld-boilerplate-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jetaimefrc/node-sql-realworld-boilerplate-app.git",
+  "author": "Demons Light <jetaimefrc@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "babel-watch -L src/index.js"
+  },
+  "devDependencies": {
+    "babel-watch": "^7.0.0",
+    "chalk": "^3.0.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verify-commit-msg.js"
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "pretty-quick --staged",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "babel-plugin-module-resolver": "^4.0.0"
+  }
+}
