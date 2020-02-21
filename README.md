@@ -1,2 +1,3 @@
-# -node-realworld-boilerplate-app
-Pls give me 1 star for this!
+# Node Realworld Boilerplate App
+
+Try something for fun!
